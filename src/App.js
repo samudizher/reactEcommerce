@@ -5,6 +5,8 @@ import { NavBar } from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/Fonts/fonts.css'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { ItemCount } from './components/Contador/ItemCount';
+
 
 function App() {
 
@@ -12,8 +14,11 @@ function App() {
     <>
       
       <NavBar/>
-      <ItemListContainer greeting="Estamos costruyendo una nueva pagina"/>
+
+|     <ItemCount/>
       
+      <ItemListContainer greeting="Estamos costruyendo una nueva pagina"/>
+
     </>
   );
 }
