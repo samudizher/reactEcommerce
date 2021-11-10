@@ -5,7 +5,7 @@ import { NavBar } from './components/NavBar/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/Fonts/fonts.css'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import { ItemCount } from './components/Contador/ItemCount';
+import { ItemCount } from './components/ItemCount/ItemCount';
 
 
 function App() {
