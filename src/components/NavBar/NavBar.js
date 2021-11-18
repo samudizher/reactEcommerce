@@ -1,4 +1,3 @@
-import {Navbar, Container, Nav, NavDropdown} from "react-bootstrap";
 import { CartWidget } from "../CartWidget/CartWidget";
 import "./NavBar.scss"
 
@@ -15,7 +14,7 @@ export const NavBar = () => {
 
             </div>
 
-        <h2>Banda abogados</h2>
+        <h2>Ejemplo NavBar</h2>
 
             <div className="divLinkRight">
 
