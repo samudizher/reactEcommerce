@@ -1,12 +1,15 @@
 import { Container,Card,Row,Button } from "react-bootstrap"
+import { Link } from "react-router-dom";
 import "./ItemList.scss";
 
 
 
 
 
-
 export const ItemList = ({productos}) =>{
+
+
+    const [numprod, setNumProd] = [""]; 
 
     return(
         <Container>
@@ -21,7 +24,8 @@ export const ItemList = ({productos}) =>{
                             <Card.Text>Precio: ${producto.precio}</Card.Text>
                             <Card.Text>{producto.stock}</Card.Text>
                             <Card.Text>{producto.descripcion}</Card.Text>
-                            <Button variant="primary">Agregar</Button>
+                            <Button variant="primary" className="m-3">Agregar</Button>
+                            <Link to ="/detail"><Button variant="primary">Ver Detalle</Button></Link>
                         </Card.Body>
                         </Card>
                     ))}
