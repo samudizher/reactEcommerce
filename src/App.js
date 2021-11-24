@@ -1,12 +1,11 @@
 import React from 'react';
-import { NavBar } from './components/NavBar/NavBar';
-
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
+import { NavBarMenu } from './components/NavBar/NavBar';
+import { HomeView } from './components/HomeView/HomeView';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/Fonts/fonts.css';
-
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
-import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer';
-import {BrowserRouter, Routes,Route} from 'react-router-dom';
 
 
 function App() {
@@ -15,14 +14,15 @@ function App() {
 
       <BrowserRouter>
 
-        <NavBar/>
+        <NavBarMenu/>
 
         
         <Routes>
 
-          <Route path= "/" element={<ItemListContainer/>}/>
-          <Route path= "/detail/:productoId" element={<ItemDetailContainer/>}/>
+          <Route path= "/" element={<HomeView/>}/>
           <Route path= "/productos" element={<ItemListContainer/>}></Route>
+          <Route path= "/detail/:productoId" element={<ItemDetailContainer/>}/>
+          <Route path="*" element={<Navigate to ="/"/>}></Route>
 
         </Routes>
 
@@ -32,3 +32,5 @@ function App() {
 }
 
 export default App;
+
+//<Route path= "/" element={<ItemListContainer/>}/>

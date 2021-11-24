@@ -8,9 +8,6 @@ import "./ItemList.scss";
 
 export const ItemList = ({productos}) =>{
 
-
-    const [numprod, setNumProd] = [""]; 
-
     return(
         <Container>
             <h2>Productos</h2>
@@ -22,8 +19,7 @@ export const ItemList = ({productos}) =>{
                         <Card.Body>
                             <Card.Title>{producto.nombre}</Card.Title>
                             <Card.Text>Precio: ${producto.precio}</Card.Text>
-                            <Card.Text>{producto.stock}</Card.Text>
-                            <Card.Text>{producto.descripcion}</Card.Text>
+                            <Card.Text>Disponibles: {producto.stock}</Card.Text>
                             <Button variant="primary" className="m-3">Agregar</Button>
                             <Link to={`/detail/${producto.id}`}><Button variant="primary">Ver Detalle</Button></Link>
                         </Card.Body>

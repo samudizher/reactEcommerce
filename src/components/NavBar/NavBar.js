@@ -1,37 +1,31 @@
+import { Navbar, Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { CartWidget } from "../CartWidget/CartWidget";
 import "./NavBar.scss"
 
 
 
-
-
-
-export const NavBar = () => {
+export const NavBarMenu = () => {
 
     return(
-        <header className="NavBar">
-
-            <div className="divLinkLeft">
-
-            <Link to ="/" className="linkNavLeft">Home</Link>
-            <Link to ="/productos" className="linkNavLeft">Productos</Link>
-            <a href="#" className="linkNavLeft">Link numero 3</a>
-
-            </div>
-
-        <h2>Ejemplo NavBar</h2>
-
-            <div className="divLinkRight">
-
-                <a href="#" className="linkNavRight">Link numero 4</a>
-                <a href="#" className="linkNavRight">Link numero 5</a>
-                <a href="#" className="linkNavRight">Link numero 6</a>
-
-            </div>
-            
-        <CartWidget/>
-
-        </header>
+        <>
+            <Navbar className="navBar" variant="light">
+            <Container>
+            <Navbar.Brand className="title">Metropoli Music</Navbar.Brand>
+            <Nav className="me-auto">
+                <Nav.Link><Link to ="/" className="linkNav">Home</Link></Nav.Link>
+                <Nav.Link><Link to ="/productos" className="linkNav">Productos</Link></Nav.Link>
+                <CartWidget/>
+            </Nav>
+            </Container>
+            </Navbar>
+      </>
     )
 }
+
+
+
+
+//<Link to ="/" className="linkNavLeft">Home</Link>
+//<Link to ="/productos" className="linkNavLeft">Productos</Link>
+//<a href="#" className="linkNavLeft">Link numero 3</a>

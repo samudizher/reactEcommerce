@@ -1,64 +1,23 @@
 
-.NavBar{
-    display: flex;
-    flex-direction: row;
-    font-family: 'Roboto', sans-serif;
-    border-bottom: 2px solid black;
+.navBar{
+    background-color: #E575CB;
 
-    h2{
-        color: black;
-        margin-left: -2%;
-        font-size: 4rem;
-        text-align: center;
-        width: 28%;
+    .title{
+        color:#0E0E0E;
+        font-family: cursive;
+        font-size: 300%;
+        margin-right: 35%;
     }
+    .linkNav{
+        color:white !important;
+        text-decoration: none;
+        font-size: 250%;
+        font-family: cursive;
+        border: 2px solid black;
 
-    .divLinkLeft{
-
-        margin-right: 0%;
-        margin-top: 4%;
-        display: flex;
-        flex-direction: row;
-        width: 43%;
-        font-size: 143%;
-
-
-        .linkNavLeft{
-            text-decoration: none;
-            padding: 3%;
-            color: black;
-            font-weight: bold;
-
-            &:hover{
-                color: gray;
-            }
+        &:hover{
+            color: black !important;
         }
-
     }
 
-    .divLinkRight{
-
-        margin-right: 0%;
-        margin-top: 4%;
-        display: flex;
-        flex-direction: row;
-        width: 43%;
-        font-size: 143%;
-
-        .linkNavRight{
-            text-decoration: none;
-            padding: 3%;
-            color: black;
-            font-weight: bold;
-
-            &:hover{
-                color: gray;
-            }
-        }
-        
-    }
-
-    hr{
-        color: black;
-    }
 }

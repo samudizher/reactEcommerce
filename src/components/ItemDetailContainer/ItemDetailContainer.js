@@ -14,7 +14,7 @@ export const ItemDetailContainer = () =>{
 
     const { productoId }= useParams()
 
-    console.log(productoId);
+
 
     useEffect( () =>{
 
