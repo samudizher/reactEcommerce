@@ -31,8 +31,6 @@ export const ItemDetailContainer = () =>{
 
     return(
         <>
-            <h2>Detalle de producto</h2>
-
             {
                 loader
                 ? <h2 className= "loaderTitle">Cargando...</h2>
