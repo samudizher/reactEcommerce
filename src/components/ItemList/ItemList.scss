@@ -4,6 +4,21 @@ h2{
     font-size: 300% !important;
 }
 
+.filterContainer{
+    text-align: center;
+
+    .filterLink{
+        margin:5%;
+        text-decoration: none;
+        color: gray;
+        font-size: 150%;
+
+        &:hover{
+            color: black;
+        }
+    }
+}
+
 .productCard{
     text-align: center;
     background-color: #FAB5F7 !important;

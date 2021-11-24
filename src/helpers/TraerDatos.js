@@ -5,7 +5,7 @@ import { stock } from "../Datos/stock";
     
                 setTimeout(() =>{
                     resolve(stock)
-                }, 3000);
+                }, 1000);
             
             })
     }    

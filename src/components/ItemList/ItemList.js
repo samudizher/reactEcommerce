@@ -12,6 +12,14 @@ export const ItemList = ({productos}) =>{
         <Container>
             <h2>Productos</h2>
                 <hr/>
+                <Container className="filterContainer">
+                        <Link to ={"/productos"} className="filterLink">Todos</Link>
+                        <Link to ={"/productos/Amplificador"} className="filterLink">Amplificador</Link>
+                        <Link to ={"/productos/Guitarra_Acustica"} className="filterLink">Guitarra Acustica</Link>
+                        <Link to ={"/productos/Guitarra_Electrica"} className="filterLink">Guitarra Electrica</Link>
+                </Container>
+
+                <hr/>
                 <Row> 
                     {productos.map( (producto) => (
                         <Card key={producto.id} className="productCard card m-3" style={{ width: '18rem' }}>

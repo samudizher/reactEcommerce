@@ -15,7 +15,7 @@ export const ItemListContainer = () =>{
     const [productos, setProductos] = useState([]);
         
 
-    const {categoryId} = useParams();
+    const { categoryId } = useParams()
 
 
         useEffect( () =>{
@@ -25,7 +25,13 @@ export const ItemListContainer = () =>{
             TraerDatos()
             .then((response) =>{
 
+                if(!categoryId){
                     setProductos(response)
+                }
+                else{
+                    setProductos(response.filter( producto => producto.category === categoryId) )
+                }
+
             })
             .catch((error) =>{
                 console.log(error);
@@ -35,7 +41,7 @@ export const ItemListContainer = () =>{
             });
     
     
-        }, [])
+        }, [categoryId])
     
  
 
