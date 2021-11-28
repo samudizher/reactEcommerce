@@ -55,7 +55,7 @@ export const stock = [
     },
     {
         id: 7,
-        img: "https://cdn.shopify.com/s/files/1/0312/0798/1101/products/19d91525-40f8-4208-b112-344eeb93d5c3_438x438.jpg?v=1637269193",
+        img: "https://cdn.shopify.com/s/files/1/0312/0798/1101/products/19d91525-40f8-4208-b112-344eeb93d5c3_85deff30-7201-4105-a10c-dc743d297ddc_1200x1200.jpg?v=1637865761",
         nombre: "Guitarra ALVAREZ acústica AD60-12-EXP",
         precio: "6920",
         stock: "40",

@@ -15,7 +15,7 @@ export const NavBarMenu = () => {
             <Nav className="me-auto">
                 <Nav.Link><Link to ="/" className="linkNav">Home</Link></Nav.Link>
                 <Nav.Link><Link to ="productos" className="linkNav">Productos</Link></Nav.Link>
-                <CartWidget/>
+                <Link to="Cart" ><CartWidget/></Link>
             </Nav>
             </Container>
             </Navbar>

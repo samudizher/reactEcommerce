@@ -6,6 +6,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/Fonts/fonts.css';
+import { Cart } from './components/Cart/Cart';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path= "/productos" element={<ItemListContainer/>}></Route>
           <Route path= "/productos/:categoryId" element={<ItemListContainer/>}></Route>
           <Route path= "/detail/:productoId" element={<ItemDetailContainer/>}/>
+          <Route path="/Cart" element={<Cart/>}/>
           <Route path="*" element={<Navigate to ="/"/>}></Route>
 
         </Routes>
