@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Container, Button} from "react-bootstrap"
 import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 import { ItemCount } from "../ItemCount/ItemCount";
 import "./ItemDetailContainer.scss"
 
 export const ItemDetail = ( ({id, img, nombre, precio, stock, descripcion}) =>{
 
+    const {agregarCarrito, isInCart} = useContext(CartContext)
 
     const [cant, setCant] = useState(0);
     const [agregado, setAgregado] = useState(false);
@@ -14,18 +16,19 @@ export const ItemDetail = ( ({id, img, nombre, precio, stock, descripcion}) =>{
     const handlerAgregar = () =>{
 
         if(cant > 0){
-            
-            
-            setAgregado(true)
 
-            console.log("Item Agregado",{
+            agregarCarrito({
                 id,
                 img,
                 nombre,
                 precio,
-                cant,
-            });
+                stock,
+                cant
+            })
+
+            setAgregado(true)
         }
+            
 
     }
 
@@ -44,7 +47,7 @@ export const ItemDetail = ( ({id, img, nombre, precio, stock, descripcion}) =>{
                                 <p>{descripcion}</p>
 
                                 {
-                                    !agregado
+                                    !isInCart(id)
                                     ?
                                             <div>
                                                 <ItemCount maximo={stock} cant={cant} setCant={setCant} onAdd={handlerAgregar}/>
