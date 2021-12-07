@@ -1,0 +1,23 @@
+
+.navBar{
+    background-color: #E575CB;
+
+    .title{
+        color:#0E0E0E;
+        font-family: cursive;
+        font-size: 300%;
+        margin-right: 35%;
+    }
+    .linkNav{
+        color:white !important;
+        text-decoration: none;
+        font-size: 250%;
+        font-family: cursive;
+        border: 2px solid black;
+
+        &:hover{
+            color: black !important;
+        }
+    }
+
+}

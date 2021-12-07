@@ -1,0 +1,68 @@
+
+h4{
+    text-align: end;
+    margin-right: 5%;
+}
+
+
+
+.cartContainer{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.5%;
+    border-bottom: 2px black solid;
+    height: 30%;
+
+
+    .imgCart{
+        width:10rem;
+        height: 10rem;
+        margin-left: 10%;
+    }
+
+    .dataCarContainer{
+        display: flex;
+        flex-direction: row;
+        margin-left: 2%;
+
+        h5{
+            font-size: 200%;
+        }
+        h6{
+            font-size: 150%;
+        }
+        .trashIcon{
+            margin-left: 40%;
+        }
+    }
+
+}
+
+.botonera{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+
+    .btn{
+        margin: 1%;  
+    }
+    .otroBoton{
+        visibility: hidden;
+    }
+}
+
+
+
+
+.cartVacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+
+    h2{
+        font-size: 500% !important;
+    margin-bottom: 3%;
+    }
+}
